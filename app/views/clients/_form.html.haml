@@ -1,0 +1,20 @@
+= bootstrap_form_for  @client do |f|
+  - if @client.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@client.errors.count, "error")} prohibited this client from being saved:"
+      %ul
+        - @client.errors.full_messages.each do |msg|
+          %li= msg
+
+  = f.text_field :last_name
+  = f.text_field :first_name
+  = f.text_field :city
+  = f.text_field :country
+  = f.text_field :primary_phone
+  = f.text_field :secondary_phone
+  = f.text_field :email
+
+  .actions
+    %br
+    %p
+      = f.submit 'Save'

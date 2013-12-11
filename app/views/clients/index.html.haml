@@ -1,0 +1,33 @@
+.container
+  %h1 Listing clients
+  .table-responsive
+    %table.table
+      %thead
+        %tr
+          %th Last name
+          %th First name
+          %th City
+          %th Country
+          %th Primary phone
+          %th Secondary phone
+          %th Email
+          %th
+          %th
+          %th
+      %tbody
+        - @clients.each do |client|
+          %tr
+            %td= client.last_name
+            %td= client.first_name
+            %td= client.city
+            %td= client.country
+            %td= client.primary_phone
+            %td= client.secondary_phone
+            %td= client.email
+            %td= link_to 'Show', client
+            %td= link_to 'Edit', edit_client_path(client)
+            %td= link_to 'Destroy', client, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+  %br
+
+  = link_to 'New Client', new_client_path, :class => 'btn btn-primary'

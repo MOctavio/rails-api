@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Last name:
+  = @client.last_name
+%p
+  %b First name:
+  = @client.first_name
+%p
+  %b City:
+  = @client.city
+%p
+  %b Country:
+  = @client.country
+%p
+  %b Primary phone:
+  = @client.primary_phone
+%p
+  %b Secondary phone:
+  = @client.secondary_phone
+%p
+  %b Email:
+  = @client.email
+
+= link_to 'Edit', edit_client_path(@client)
+\|
+= link_to 'Back', clients_path
