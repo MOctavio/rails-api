@@ -10,4 +10,4 @@ RestFul web service project available at: <a href="http://rails-api.herokuapp.co
 To known how to consume the JSON resources from Android device you may refer to <a href="https://github.com/MOctavio/AndroidRestClient" target="_blank">AndroidRestClient</a> project available on GitHub.
 
 ###License###
-Rails-api by Mario Octavio Jimenez is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License.</a>
+Rails-api by Mario Octavio Jimenez is licensed under the <a href="https://github.com/MOctavio/rails-api/blob/master/LICENSE">GNU GENERAL PUBLIC LICENSE Version 2</a>
