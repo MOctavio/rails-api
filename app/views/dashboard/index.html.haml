@@ -3,16 +3,18 @@
     %h1 rails-api
     %p A simple web service build on Ruby 2.0, Rails 4.0.2 for testing and educational purposes.
 
-  .row.col-md-4    
-    %img {:src => "/images/rails-api.png"}
-  .row.col-md-8
-    %h2 Description
-    = "Rails-api offers a simple web front end to manage a basic client list, it also brings the capability to respond in JSON format to other application interface simply by accessing through #{link_to 'Heroku rails-api URI', 'http://rails-api.herokuapp.com/clients/1.json'}.".html_safe
+.container
+  .col-md-2    
+    =image_tag 'rails-api.png'
+  .col-md-5
+    %h4 Description
+    %p= "Rails-api offers a simple web front end to manage a basic clients list, also it brings the capability to respond in JSON format to other application interface simply by accessing through #{link_to 'Heroku rails-api URI', 'http://rails-api.herokuapp.com/clients/1.json'}.".html_safe
 
-    = "Rails-api web service project available at: #{link_to 'GitHub - rails-api', 'https://github.com/MOctavio/rails-api'}.".html_safe
+    %p= "Rails-api web service project available at: #{link_to 'GitHub - rails-api', 'https://github.com/MOctavio/rails-api'}.".html_safe
 
-    = "To see a sample project about how to consume the JSON resource refer to AndroidRestClient project available at: #{link_to 'GitHub - AndroidRestClient', 'https://github.com/MOctavio/AndroidRestClient'}.".html_safe
+    %p= "To see a sample project on how to consume the JSON resource, refer to AndroidRestClient project available at: #{link_to 'GitHub - AndroidRestClient', 'https://github.com/MOctavio/AndroidRestClient'}.".html_safe
 
-  .footer.row
-    %h3 License
+.container
+  .footer.col-md-7
+    %h5 License
     %p= "Rails-api by Mario Octavio Jimenez is licensed under a #{link_to 'Creative Commons Attribution-ShareAlike 3.0 Unported License.', 'http://creativecommons.org/licenses/by-sa/3.0/'}".html_safe
