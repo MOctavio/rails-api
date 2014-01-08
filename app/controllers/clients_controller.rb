@@ -6,14 +6,18 @@ class ClientsController < ApplicationController
   def index
     @clients = Client.all
     respond_to do |format|
-        format.html 
-        format.json { render :json => @clients, :callback => params[:callback] }
-      end
+      format.html 
+      format.json { render :json => @clients, :callback => params[:callback] }
+    end
   end
 
   # GET /clients/1
   # GET /clients/1.json
-  def show
+  def show    
+    respond_to do |format|
+      format.html 
+      format.json { render :json => @client, :callback => params[:callback] }
+    end
   end
 
   # GET /clients/new
