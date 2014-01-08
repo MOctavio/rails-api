@@ -7,7 +7,7 @@ class ClientsController < ApplicationController
     @clients = Client.all
     respond_to do |format|
         format.html 
-        format.json { render :json => { :results => @clients }, :callback => params[:callback] }
+        format.json { render :json => @clients, :callback => params[:callback] }
       end
   end
 
