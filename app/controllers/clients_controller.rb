@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:update]
+  skip_before_action :verify_authenticity_token
 
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
