@@ -1,8 +1,6 @@
 class ClientsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  before_action :set_client, only: [:show, :edit, :update, :destroy]
-
   def verify_custom_authenticity_token
     # checks whether the request comes from a trusted source
   end
