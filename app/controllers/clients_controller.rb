@@ -1,8 +1,11 @@
 class ClientsController < ApplicationController
-  skip_before_action :verify_authenticity_token, except: [:update]
+  skip_before_action :verify_authenticity_token, :only [:update]
 
-  before_action :set_client, only: [:show, :edit, :update, :destroy]
+  before_action :verify_custom_authenticity_token, :only [:update]
 
+  def verify_custom_authenticity_token
+    # checks whether the request comes from a trusted source
+  end
   # GET /clients
   # GET /clients.json
   def index
