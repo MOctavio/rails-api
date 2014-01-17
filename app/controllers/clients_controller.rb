@@ -1,9 +1,6 @@
 class ClientsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-  def verify_custom_authenticity_token
-    # checks whether the request comes from a trusted source
-  end
   # GET /clients
   # GET /clients.json
   def index
