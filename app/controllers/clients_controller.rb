@@ -52,7 +52,7 @@ class ClientsController < ApplicationController
     respond_to do |format|
       if @client.update(client_params)
         format.html { redirect_to @client, notice: 'Client was successfully updated.' }
-        format.json { head :no_content }
+        format.json { head 'Client was successfully updated.' }
       else
         format.html { render action: 'edit' }
         format.json { render json: @client.errors, status: :unprocessable_entity }
